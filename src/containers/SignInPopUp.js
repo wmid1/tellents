@@ -16,7 +16,7 @@ class SignInAuth extends Component {
 
   close = () => {
     this.props.modalClose(false);
-    this.setState({ value: '' });
+    this.setState({ value: '', email: '', first_name: '', last_name: '', password: '' });
   };
 
   axiosPost = () => {
@@ -55,7 +55,6 @@ class SignInAuth extends Component {
 
   passSend = event => {
     this.setState({ password: event.target.value });
-    console.log('hi');
   };
 
   emailSend = event => {

@@ -38,7 +38,6 @@ class LogInAuth extends Component {
 
   passSend = event => {
     this.setState({ password: event.target.value });
-    console.log('hi');
   };
 
   emailSend = event => {
@@ -47,7 +46,7 @@ class LogInAuth extends Component {
 
   close = () => {
     this.props.modalClose(false);
-    this.setState({ value: '' });
+    this.setState({ value: '', email: '', password: '' });
   };
 
   render() {
