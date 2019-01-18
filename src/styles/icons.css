@@ -1,0 +1,86 @@
+/***
+blue - color: #15a4fa;
+green - color: #1dd459;
+***/
+
+
+.icon{
+    display: block;
+}
+
+.search-icon{
+    background: url("../images/search-icon.png");
+    width: 16px;
+    height: 16px;
+}
+
+.panel-btn .icon{
+    width: 46px;
+    height: 46px;
+    background: url("../images/panel-icons.png");
+    float: left;
+    margin-right: 10px;
+}
+
+.panel-btn .icon.icon-hand{
+    background-position: 0 0;
+}
+
+.panel-btn a:hover .icon.icon-hand{
+    background-position: 0 -46px;
+}
+.panel-btn .icon.icon-new{
+    background-position: -46px 0;
+}
+
+.panel-btn a:hover .icon.icon-new{
+    background-position: -46px -46px;
+}
+.panel-btn .icon.icon-share{
+    background-position: -92px 0;
+}
+
+.panel-btn a:hover .icon.icon-share{
+    background-position: -92px -46px;
+}
+.star-icon{
+    width: 19px;
+    height: 19px;
+    background: url("../images/star-icon.png");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -3px;
+}
+.plus-icon{
+     width: 9px;
+    height: 9px;
+    background: url("../images/plus-icon.png");
+    display: inline-block;
+    vertical-align: middle;
+      margin-right: 8px;
+    margin-top: -3px;
+}
+
+.post-actions .icon{
+     width: 20px;
+    height: 20px;
+    background: url("../images/post-actions.png");
+    display: inline-block;
+     vertical-align: middle;
+     margin-right: 8px;
+    margin-top: -3px;
+}
+
+.icon.like-icon{
+    background-position: 0 0;
+}
+.icon.share-icon{
+    background-position: -20px 0;
+}
+a:hover .icon.like-icon{
+    background-position: 0 -20px;
+}
+a:hover  .icon.share-icon{
+    background-position: -20px -20px;
+}

@@ -1,0 +1,411 @@
+.tellent-or-job-detail-wrapper {
+	padding-bottom: 100px;
+}
+.tellent-or-job-detail-wrapper.flexbox > div {
+	margin: 0 2%;
+}
+.tellent-or-job-profile-box {
+	min-width: 60%;
+}
+.tellent-or-job-profile-box .job-box-details {
+	display: block;
+	width: 100%;
+	margin-bottom: 50px;
+}
+.tellent-or-job-profile-box .job-box-details .about-block-wrapper .info-block .title:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.tellent-or-job-profile-box .about-block-wrapper {
+	margin: 0;
+}
+.tellent-or-job-profile-box .info-block {
+	width: 100%;
+}
+.tellent-or-job-profile-box .about-block-wrapper .section-top {
+	position: relative;
+}
+.tellent-or-job-profile-box .about-block-wrapper .section-top .notif{
+	top: 0;
+    left: 0;
+    background-color: #1dd459;
+}
+.tellent-or-job-profile-box .soc-link {
+	font-size: 22px;
+	padding: 5px;
+}
+.tellent-or-job-profile-box .section-top {
+	padding-bottom: 15px;
+}
+.tellent-or-job-profile-box .section-top .info-block {
+	text-align: center;
+	margin: 10px 0;
+}
+.tellent-or-job-profile-box .section-tips .icon {
+	font-size: 15px;
+	color: #a7b3c0;
+	margin-right: 10px;
+}
+.tellent-or-job-profile-box .section-title {
+	font-size: 20px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	color: #15a4fa;
+}
+.tellent-or-job-profile-box .media-items {
+	margin: 15px -20px;
+	position: relative;
+	cursor: pointer;
+}
+.tellent-or-job-profile-box .media-item {
+	width: 50%;
+	padding: 1px;
+	margin: 0;
+}
+.tellent-or-job-profile-box .media-items .media-mask .btn,
+.tellent-or-job-profile-box .media-items .media-mask .icon {
+    color: #15a4fa;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 1;
+}
+.tellent-or-job-profile-box .media-items .media-mask .icon {
+	font-size: 25px;
+	font-weight: normal;
+}
+.tellent-or-job-profile-box .media-items:hover .media-mask {
+    opacity: 1;
+}
+.tellent-or-job-profile-box .media-item-file {
+	text-align: center;
+}
+.tellent-or-job-profile-box .media-item-file .file-icon,
+.tellent-or-job-profile-box .media-item-file .file-title {
+	padding: 5px;
+}
+.tellent-or-job-profile-box .media-item-file .file-icon .icon{
+	font-size: 40px;
+	color: #15a4fa;
+}
+.tellent-or-job-profile-box .media-item-file .file-title {
+	font-size: 13px;
+}
+.tellent-or-job-profile-box .audio-item {
+    margin: 1px;
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.tellent-or-job-profile-box .audio-item > .flexbox{
+	min-height: auto;
+	padding: 5px;
+}
+.tellent-or-job-profile-box .audio-item .btn {
+	margin: auto 0;
+	font-size: 13px;
+}
+.tellent-or-job-profile-box .audio-title {
+	font-size: 13px;
+	font-weight: normal;
+}
+.tellent-or-job-profile-box .audio-item.in-play .progress {
+	height: 1px;
+}
+.tellent-or-job-profile-box .job-details-right .section-title {
+	margin: 0 0 30px 0;
+}
+.tellent-or-job-profile-box .job-details-right .display-table-th {
+	font-weight: normal;
+	width: 70%;
+}
+.tellent-or-job-profile-box .job-box-details .job-details-right {
+	padding: 25px 30px;
+}
+.tellent-or-job-profile-box .job-details-right section {
+	padding: 20px 0;
+}
+.tellent-or-job-profile-box .promo-block {
+	padding: 0;
+	margin: 10px 0;
+	border: none;
+}
+.tellent-or-job-profile-box .promo-block .panel-title > div {
+	margin: auto 0;
+}
+.tellent-or-job-profile-box .promo-block .panel-bloc {
+	margin: 0;
+}
+.tellent-or-job-profile-box .feedback-item {
+	padding-left: 0;
+	padding-right: 0;
+}
+.tellent-or-job-profile-box .feedback-item:last-child {
+	border: none;
+}
+.tellent-or-job-profile-box .feedback-section .section-title {
+	margin-bottom: 15px;
+}
+.tellent-or-job-profile-box .feedback-section .btn {
+	margin: 20px auto 5px;
+    display: block;
+}
+.tellent-or-job-profile-box .feedback-item .item-footer {
+	margin-top: 15px;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	color: #7a7a7c;
+}
+.tellent-or-job-profile-box .job-details-right-header > div {
+	padding: 0;
+}
+.tellent-or-job-profile-box .job-details-right-header .btn {
+	max-width: 160px;
+	width: 100%;
+	text-transform: none;
+	display: block;
+	margin-bottom: 8px;
+}
+.tellent-or-job-profile-box .job-details-right-header .btn:last-child {
+	margin-bottom: 0;
+}
+.tellent-or-job-profile-box .job-box-title {
+	margin-bottom: 25px;
+}
+.tellent-or-job-profile-box .job-box-name {
+	font-size: 20px;
+}
+.tellent-or-job-profile-box .job-box-prof {
+	font-size: 14px;
+	font-weight: normal;
+}
+.tellent-or-job-profile-box .about-block-wrapper .job-box-title{
+	text-align: center;
+}
+.tellent-or-job-profile-box .job-box-title .post-date {
+    margin-bottom: 5px;
+    opacity: 0.6;
+    font-size: 12px;
+    color: #586574;
+}
+.tellent-or-job-profile-box  .job-box-title .job-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #4b5053;
+}
+.tellent-or-job-profile-box .job-details-right-header .save-job-btn {
+	border: none;
+}
+.tellent-or-job-profile-box .job-details-right-header .price-info {
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+.tellent-or-job-profile-box .job-details-right-header .price-info .icon {
+	margin: auto 15px auto 0;
+	color: #a7b3c0;
+}
+.tellent-or-job-profile-box .job-details-right .job-box-tips .tip {
+	border: none;
+	padding: 5px;
+	min-width: 60px;
+	margin: 5px auto;
+}
+.tellent-or-job-profile-box .job-details-right .job-box-tips .tip > span {
+	display: block;
+	position: static;
+	text-align: center;
+	padding: 0;
+}
+.tellent-or-job-profile-box .job-details-right .job-box-tips .tip .title {
+	text-transform: uppercase;
+}
+.tellent-or-job-profile-box .job-box-deskr .text {
+	max-height: 80px;
+	overflow: hidden;
+	position: relative;
+}
+.job-profile-box .job-box-deskr .text {
+	max-height: 120px;
+}
+.job-box-deskr-file {
+	margin-top: 35px;
+	font-size: 13px;
+}
+.job-box-deskr-file .file-title {
+	padding: 0;
+}
+.job-box-deskr-file .icon-btn {
+	opacity: 0.7;
+	color: #15a4fa;
+}
+.job-box-deskr-file .icon-btn:hover {
+	opacity: 1;
+	color: #15a4fa;
+}
+.tellent-or-job-profile-box .job-box-deskr .text .text-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 50%;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+}
+.tellent-or-job-profile-box .more-info {
+	font-weight: 300;
+	margin: 0 auto;
+	display: block;
+}
+.tellent-or-job-profile-box .proposals-section .flex-table-cell {
+	width: 30%;
+	margin: auto 1%;
+}
+.tellent-or-job-profile-box .proposals-section .work-success-status {
+	margin-bottom: 5px;
+}
+.tellent-or-job-profile-box .proposals-section .my-progress-bar {
+	text-align: left;
+}
+.tellent-or-job-profile-box .proposals-section .my-progress-bar .progress {
+	width: 100%;
+	margin-left: 0;
+}
+.proposals-stat {
+	font-size: 22px;
+	font-weight: 300;
+	color: #7f7f7f;
+	padding: 0 20px;
+	vertical-align: middle;
+}
+.bid-header-cell {
+	-webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    min-width: 120px;
+}
+.proposal-item {
+	padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.proposal-item:last-child {
+	border: none;
+}
+
+.similar-profiles {
+	width: 100%;
+}
+.similar-profiles .job-box {
+	max-width: 380px; 
+	display: inline-block;
+}
+.similar-profiles .title {
+	margin: 0 0 25px;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	color: #15a4fa;
+}
+
+
+/*MEDIA MODAL - START*/
+.media-modal .modal-content {
+	padding-bottom: 0;
+}
+.media-modal .modal-body {
+	padding: 0;
+}
+.media-modal-nav {
+	padding: 0 50px;
+	background-color: #f6f6f6;
+	border-width: 2px;
+}
+.media-modal-nav > li,
+.media-modal-nav > li:hover,
+.media-modal-nav > li.active {
+	padding: 20px 0;
+	float: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	outline: none;
+	background-color: transparent;
+	position: relative;
+    bottom: -2px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.media-modal-nav>li>a {
+	font-size: 26px;
+	font-weight: 300;
+	color: #7f7f7f;
+	border: none;
+}
+.media-modal-nav>li.active>a, 
+.media-modal-nav>li.active>a:focus, 
+.media-modal-nav>li.active>a:hover,
+.media-modal-nav>li>a:hover,
+.media-modal-nav>li>a:focus, 
+.media-modal-nav>li>a:hover,
+.media-modal-nav>li:focus>a,
+.media-modal-nav>li:hover>a {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+    color: #15a4fa;
+}
+.media-modal-nav>li.active,
+.media-modal-nav>li:hover {
+	border-bottom-color: #15a4fa;
+}
+.media-modal-tab {
+	padding: 35px 50px;
+}
+.carousel-control.media-prev-btn,
+.carousel-control.media-next-btn {
+	background: transparent;
+}
+.carousel-control.media-prev-btn {
+	left: -35px;
+}
+.carousel-control.media-next-btn {
+	right: -35px;
+}
+.media-prev-btn .icon,
+.media-next-btn .icon {
+	width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+    color: #cccccc;
+    top: 50%;
+    position: absolute;
+}
+.media-prev-btn .icon {
+	left: 0;
+}
+.media-next-btn .icon {
+	right: 0;
+}
+.media-slide-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+.media-slide-descr {
+	font-size: 14px;
+	line-height: 1.71;
+	margin-bottom: 20px;
+}
+.media-slide-img {
+	background-image: url(../images/media-img@2x.png);
+	width: 100%;
+	padding-top: 60%;
+}
+/*MEDIA MODAL - END*/

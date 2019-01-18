@@ -1,12 +1,33 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { Route, Switch } from 'react-router'; // react-router v4
+import { ConnectedRouter } from 'connected-react-router';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
 import * as serviceWorker from './serviceWorker';
+import App from './pages/App';
+import Search from './pages/Search';
+import Skills from './pages/Skills';
+import configureStore, { history } from './reducers/configureStore';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore();
+const persistor = persistStore(store);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+ReactDOM.render(
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <ConnectedRouter history={history}>
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route path="/Search" component={Search} />
+          <Route path="/Skills" component={Skills} />
+        </Switch>
+      </ConnectedRouter>
+    </PersistGate>
+  </Provider>,
+  document.getElementById('root'),
+);
 serviceWorker.unregister();

@@ -1,0 +1,266 @@
+.simple-modal .modal-dialog{
+    width: 850px;
+}
+
+.simple-modal .close:active,
+.simple-modal .close:focus{
+    outline: none;
+}
+
+.callback-form .modal-header{
+    padding: 75px 80px 0;
+}
+
+.callback-form__title{
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 49px;
+    font-weight: 300;
+    line-height: 1.39;
+    color: #15a4fa;
+}
+
+.callback-form__title.callback-form__title--color-white{
+    color: #fff;
+}
+
+.callback-form__modal-icon{
+    position: absolute;
+    left: 215px;
+    top: 60px;
+}
+
+.callback-form .modal-body{
+    padding: 0 80px 45px;
+}
+
+.callback-form__description{
+    margin: 0 0 50px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.44;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+.callback-form__description.callback-form__description--color-white{
+    color: #fff;
+}
+
+.callback-form .form-control{
+    padding: 15px 30px;
+    height: auto;
+}
+
+.callback-form textarea.form-control{
+    resize: none;
+    height: 280px;
+}
+
+.callback-form .with-arrow{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px 0 20px;
+    border:none;
+    background-color: #15a4fa;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+.callback-form .with-arrow:before{
+    content: '';
+    width: 46px;
+    height: 14px;
+    position: relative;
+    top: 1px;
+    margin-right: 24px;
+    display: inline-block;
+    background: url(../images/arrows-move-right.png) no-repeat;
+}
+.callback-form__context-remark{
+    margin-top: 15px;
+    color: #334965;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+.callback-form .close{
+    position: absolute;
+    top: 34px;
+    right: 33px;
+}
+
+/*terms modal*/
+.terms .modal-title{
+    padding: 53px 0 15px;
+    font-size: 49px;
+    font-weight: 300;
+    line-height: 1.39;
+    text-align: center;
+    color: #15a4fa;
+}
+.terms .modal-body{
+    padding: 0 53px;
+}
+
+.terms .terms__description{
+    max-height: 530px;
+    margin: 0 0 30px 0;
+    overflow-y: scroll;
+}
+
+.terms .terms__blockquote{
+    margin-bottom: 20px;
+    line-height: 1.57;
+    color: #7f7f7f;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.terms .terms__blockquote:last-child{
+    margin-bottom: 0;
+}
+
+.terms .input-group{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.terms .modal-footer{
+    text-align: center;
+}
+
+.terms .action-modal-btn{
+    padding: 19px 75px;
+}
+
+.terms__modal-footer{
+    padding: 30px 53px 40px;
+    background-color: #f4f4f4;
+
+}
+
+.modal .terms__modal-footer{
+    border-top: solid 1px #e2e2e2;
+}
+.terms .pseudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*pseudo checkbox start*/
+.pseudo input[type=checkbox]{
+    display: none;
+}
+
+.pseudo .pseudo__pseudo-checkbox{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border-radius: 2px;
+    border: solid 2px #cacaca;
+    cursor: pointer;
+}
+
+.pseudo input[type=checkbox]:checked + .pseudo__pseudo-checkbox:before{
+    content: "\e91f";
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #15a4fa;
+    position: relative;
+    top: 1px;
+}
+
+.pseudo__pseudo-title{
+    color: #494949;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*pseudo checkbox end*/
+
+@media only screen and (max-width: 992px) {
+    /*simple modal start*/
+    .simple-modal .modal-dialog{
+        width: 600px;
+    }
+    /*simple modal end*/
+
+    /*ask-us modal start*/
+    .ask-us .ask-us__body-title{
+        padding: 0 20px;
+        font-size: 20px;
+        margin: 15px 0 30px;
+    }
+    /*ask-us modal end*/
+}
+
+@media only screen and (max-width: 768px) {
+    /*simple modal start*/
+    .simple-modal .modal-dialog{
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .simple-modal .modal-header,
+    .simple-modal .modal-body{
+        padding: 15px 15px 0;
+    }
+
+    .simple-modal .ask-us__modal-icon{
+        position: absolute;
+        left: 60px;
+        top: 24px;
+    }
+
+    /*simple modal end*/
+
+    /*ask-us modal start*/
+    .ask-us .ask-us__modal-icon img{
+        width: 100px;
+    }
+
+    .ask-us .ask-us__modal-title{
+        margin-bottom: 15px;
+    }
+
+    .ask-us .close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .ask-us .ask-us__body-title{
+        font-size: 16px;
+    }
+
+    .ask-us textarea.form-control{
+        height: 150px;
+    }
+
+    .ask-us__context-remark{
+        margin-bottom: 40px;
+    }
+    /*ask-us modal end*/
+
+    /*terms start*/
+    .terms .modal-title{
+        padding: 30px 0 0;
+        font-size: 35px;
+    }
+    .terms .terms__modal-footer{
+        padding: 30px 15px 40px;
+    }
+
+    /*terms end*/
+}

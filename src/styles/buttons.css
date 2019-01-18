@@ -1,0 +1,180 @@
+.btn {
+    padding: 6px 25px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 30px;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+}
+.btn:hover,
+.btn:focus,
+.btn.active,
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+}
+.btn-gray {
+    font-weight: 700;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    color: #8a8d8e;
+    background-color: #f0f1f2;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+}
+.btn-gray:hover {
+    background-color: #dce1e6;
+    color: #47596b;
+}
+.btn-blue {
+    background-color: #15a4fa;
+    color: #fff;
+    border-color: #15a4fa;
+    outline: none;
+}
+.btn-blue:hover {
+    background-color: #1293e1;
+    color: #fff;
+}
+.btn-bold {
+    font-weight: bold;
+}
+.btn-bg-transparent{
+    background-color: transparent;
+}
+.btn-blue-border {
+    color: #15a4fa;
+    background-color: transparent;
+    border-color: #15a4fa;
+}
+.btn-blue-border:hover,
+.btn-blue-border:focus {
+    color: #15a4fa;
+}
+.btn-blue-hover:hover {
+    color: #fff;
+    background-color: #15a4fa;
+    border-color: #15a4fa;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #15a4fa;
+    border-color: #15a4fa;
+}
+.btn-primary:hover {
+    color: #fff;
+    background: #15a4fa;
+}
+.btn-orange-border {
+    color: #ffa51e;
+    background-color: transparent;
+    border-color: #ffa51e;
+}
+.info-btn {
+    width: 29px;
+    height: 27px;
+    padding: 0;
+    background-color: #f0f1f2;
+}
+.btn-with-icon .button-content {
+    position: relative;
+    padding-left: 30px;
+    left: -15px;
+    display: inline-block;
+}
+.btn-with-icon .button-content .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 18px;
+    margin-top: -9px;
+}
+/*icon-btn*/
+.icon-btn {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    color: #cccccc;
+    font-size: 18px;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+}
+.icon-btn:hover{
+    color: #6f6f71;
+}
+
+/*edit-btn*/
+.edit-btn-holder.item-info {
+    position: relative;
+    padding-top: 10px !important;
+}
+.edit-btn-holder.item-info_title {
+    position: relative;
+    padding-top: 0!important;
+}
+.edit-btn-holder.item-info .edit-btn {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.edit-btn-holder.item-info_title .edit-btn {
+    opacity: 0;
+    position: absolute;
+    right: -15px;
+    top: 0;
+}
+.edit-btn .icon{
+    color: #8a8d8e;
+    font-size: 20px;
+}
+.edit-btn:hover .icon{
+    color: #333;
+}
+.edit-btn-holder:hover .edit-btn {
+    opacity: 1;
+}
+.edit-btn-holder.saved .editable,
+.edit-btn-holder.edit .saved-info {
+    display: none;
+}
+.edit-btn-holder.saved .saved-info,
+.edit-btn-holder.edit .editable {
+    display: block;
+}
+/*edit-btn - end*/
+
+
+/*soc-btns*/
+.soc-btn {
+    width: 55px;
+    height: 55px;
+    margin: 0 15px;
+    padding: 0;
+    color: #fff;
+}
+.soc-btn:hover {
+    color: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.soc-btn--f {
+    background-image: -moz-linear-gradient(top,  #527ed9 0%, #3969cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#527ed9), color-stop(100%,#3969cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #527ed9 0%,#3969cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #527ed9 0%,#3969cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #527ed9 0%,#3969cc 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #527ed9 0%,#3969cc 100%); /* W3C */
+}
+.soc-btn--g {
+    background-image: -moz-linear-gradient(top,  #dd6262 0%, #c34949 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dd6262), color-stop(100%,#c34949)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #dd6262 0%,#c34949 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #dd6262 0%,#c34949 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #dd6262 0%,#c34949 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #dd6262 0%,#c34949 100%); /* W3C */
+}
