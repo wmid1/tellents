@@ -7,6 +7,10 @@
     -webkit-transition: all ease 0.25s;
     transition: all ease 0.25s;
 }
+.btn-send {
+    width: -webkit-fill-available;
+    height: 58px;
+}
 .btn:hover,
 .btn:focus,
 .btn.active,

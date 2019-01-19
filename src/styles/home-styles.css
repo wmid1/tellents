@@ -1158,23 +1158,35 @@ footer ul li a{
 }
 .sign-up-modal, input:valid {
     border-radius: 30px;
-    /* background-color: #f3fffa;
-    border: solid 2px #2bd285; */
 }
-.sign-up-modal, input:valid + .error-message {
+.sign-up-modal input:valid + .error-message {
     text-align: left;
     display: block;
     
 }
-.sign-up-modal, input:invalid {
+
+.invalid {
+    border-radius: 30px;
     background-color: #fff1f5;
     border: solid 2px #cb001f;
 }
-.sign-up-modal, input:invalid + .error-message {
+.sign-up-modal .invalid  input:invalid {
+    background-color: #fff1f5;
+    border: solid 2px #cb001f;
+}
+.sign-up-modal input:invalid + .error-message {
     display: block;
     color: #cb001f;
-    
 }
+/* .form-control, .invalid {
+    background-color: #fff1f5;
+    border: solid 2px #cb001f;
+} */
+
+.invalid + .error-message {
+    display: block;
+    color: #cb001f;
+} 
 .sign-up-modal, input:focus:invalid {
     background-color: #fffaf1;
     border: solid 2px #f5a623;

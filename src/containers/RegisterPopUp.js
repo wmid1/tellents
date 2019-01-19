@@ -2,44 +2,67 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import toastr from 'toastr';
-import { fetchSignIn } from '../api';
 import { authentication, authChange } from '../actions/actions';
+import { fetchRegister } from '../api';
 import '../../node_modules/toastr/build/toastr.css';
 import '../styles/home-styles.css';
 
-class LogInPopUp extends Component {
+class RegisterPopUp extends Component {
   static propTypes = {
     userReducer: PropTypes.object,
     authentication: PropTypes.func.isRequired,
     authChange: PropTypes.func.isRequired,
-    fetchSignIn: PropTypes.func,
+    fetchRegister: PropTypes.func,
     modalClose: PropTypes.func.isRequired,
-    modalLogIn: PropTypes.bool,
+    modalSignIn: PropTypes.bool,
   };
 
   state = {
     email: '',
+    firstName: '',
+    lastName: '',
     password: '',
     onSubmit: true,
+    firstNameValid: true,
+    lastNameValid: true,
     passwordValid: true,
     emailValid: true,
   };
 
-  postLogInForm = event => {
+  close = () => {
+    this.props.modalClose(false);
+    this.setState({
+      email: '',
+      firstName: '',
+      lastName: '',
+      password: '',
+      firstNameValid: true,
+      lastNameValid: true,
+      passwordValid: true,
+      emailValid: true,
+    });
+  };
+
+  postRegisterForm = event => {
     event.preventDefault();
     this.setState({ onSubmit: false });
-    const { email, password } = this.state;
-
+    const { email, firstName, lastName, password } = this.state;
     if (email.length > 3 && password.length > 7) {
-      fetchSignIn(email, password)
+      fetchRegister(firstName, lastName, email, password)
         .then(response => {
           this.props.modalClose(false);
           this.props.authentication(response.headers);
           this.props.authChange(true);
-          this.setState({ onSubmit: true, passwordValid: true, emailValid: true });
+          this.setState({
+            onSubmit: true,
+            firstNameValid: true,
+            lastNameValid: true,
+            passwordValid: true,
+            emailValid: true,
+          });
         })
         .catch(error => {
-          toastr.error('Invalid login credentials. Please try again.');
+          toastr.error('Email already in use');
           this.setState({ onSubmit: true });
           console.log(error);
         });
@@ -70,15 +93,10 @@ class LogInPopUp extends Component {
     }
   };
 
-  close = () => {
-    this.props.modalClose(false);
-    this.setState({ email: '', password: '', passwordValid: true, emailValid: true });
-  };
-
   render() {
-    const { modalLogIn } = this.props;
+    const { modalSignIn } = this.props;
 
-    if (modalLogIn) {
+    if (modalSignIn) {
       return (
         <div className="popUp justify-content-center">
           <div className="modal-window">
@@ -90,44 +108,63 @@ class LogInPopUp extends Component {
                 aria-label="Close"
                 onClick={() => this.close()}
               >
-                <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true">×</span>
               </button>
             </div>
             <div className="modal-body">
-              <div className="modal-title">Login Into Your Account</div>
+              <div className="modal-title blue-color">Please Sign Up</div>
+              <div className="modal-text">Join over 2 million tallents already using Tellents. Start now for free!</div>
               <div className="modal-form">
-                <form onSubmit={this.state.onSubmit ? this.postLogInForm : this.waitSubmitForm}>
+                <form onSubmit={this.state.onSubmit ? this.postRegisterForm : this.waitSubmitForm}>
                   <div className="input-wrapper">
                     <input
-                      autoFocus="autofocus"
-                      ng-model="$ctrl.user.email"
-                      id="user_email"
+                      type="text"
+                      className={this.state.firstNameValid ? 'form-control' : 'invalid'}
+                      name="firstName"
+                      placeholder="First Name"
+                      required
+                      onChange={this.handleInputChange}
+                    />
+                    <span className="error-message">Please enter your First Name</span>
+                  </div>
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      className={this.state.lastNameValid ? 'form-control' : 'invalid'}
+                      name="lastName"
+                      placeholder="Last Name"
+                      required
+                      onChange={this.handleInputChange}
+                    />
+                    <span className="error-message">Right Name</span>
+                  </div>
+                  <div className="input-wrapper">
+                    <input
                       type="email"
                       className={this.state.emailValid ? 'form-control' : 'invalid'}
                       name="email"
                       placeholder="Email"
-                      onChange={this.handleInputChange}
                       required
+                      onChange={this.handleInputChange}
                     />
                     <span className="error-message">Check your email</span>
                   </div>
                   <div className="input-wrapper">
                     <input
                       type="password"
-                      name="password"
-                      onChange={this.handleInputChange}
                       className={this.state.passwordValid ? 'form-control' : 'invalid'}
+                      name="password"
                       placeholder="Password"
                       required
                       minLength="8"
+                      onChange={this.handleInputChange}
                     />
                     <span className="error-message">Too short. Use at least 8 characters</span>
                   </div>
                   <div className="form-group">
                     <input
                       type="submit"
-                      name="commit"
-                      value="Log In"
+                      value="➡ START NOW"
                       ng-click="$ctrl.login(sessionsForm)"
                       className="btn btn-lg btn-primary login"
                     />
@@ -155,4 +192,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(LogInPopUp);
+)(RegisterPopUp);

@@ -41,11 +41,6 @@ class Skills extends Component {
           value={this.state.username}
           onChange={this.handleChange}
         />
-        {this.state.value !== '' && (
-          <button className="btn btn-secondary mt-2 " onClick={this.handleSubmit}>
-            <b>Log In</b>
-          </button>
-        )}
       </div>
     );
   }
