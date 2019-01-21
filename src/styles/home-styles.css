@@ -1,5 +1,6 @@
 /*HOME-PAGE - START*/
 @import url('chat-window.css');
+@import '~toastr/toastr.scss';
 
 .home-page .wrapper {
     position: relative;

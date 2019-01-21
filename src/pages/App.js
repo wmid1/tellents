@@ -6,7 +6,6 @@ import { authentication, authChange } from '../actions/actions';
 import { validation, logOut } from '../api';
 import LogInPopUp from '../containers/logInPopUp';
 import RegisterPopUp from '../containers/RegisterPopUp';
-import '../../node_modules/toastr/build/toastr.css';
 import '../styles/landing-styles.css';
 
 class App extends Component {

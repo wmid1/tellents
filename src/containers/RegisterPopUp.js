@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import toastr from 'toastr';
 import { authentication, authChange } from '../actions/actions';
 import { fetchRegister } from '../api';
-import '../../node_modules/toastr/build/toastr.css';
 import '../styles/home-styles.css';
 
 class RegisterPopUp extends Component {

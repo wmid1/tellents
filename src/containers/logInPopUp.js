@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import toastr from 'toastr';
 import { fetchSignIn } from '../api';
 import { authentication, authChange } from '../actions/actions';
-import '../../node_modules/toastr/build/toastr.css';
 import '../styles/home-styles.css';
 
 class LogInPopUp extends Component {

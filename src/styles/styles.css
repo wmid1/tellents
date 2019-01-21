@@ -12,3 +12,5 @@
 @import url('tallent-or-job-detail.css');
 @import url('FAQ-styles.css');
 @import url('404-styles.css');
+
+@import '~toastr/toastr.scss';

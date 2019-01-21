@@ -3,6 +3,7 @@
 
 @import url('reusable.css');
 @import url('buttons.css');
+@import '~toastr/toastr.scss';
 
 html, body,
 body section,
