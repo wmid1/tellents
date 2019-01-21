@@ -60,10 +60,9 @@ class RegisterPopUp extends Component {
             emailValid: true,
           });
         })
-        .catch(error => {
+        .catch(() => {
           toastr.error('Email already in use');
           this.setState({ onSubmit: true });
-          console.log(error);
         });
     }
   };
@@ -74,20 +73,22 @@ class RegisterPopUp extends Component {
   };
 
   handleInputChange = event => {
-    const nameInput = event.target.name;
-    this.setState({ [nameInput]: event.target.value });
-    if (event.target.name === 'password') {
-      if (event.target.value.length < 8) {
+    const {
+      target: { value, name },
+    } = event;
+    this.setState({ [name]: value });
+    if (name === 'password') {
+      if (value.length < 8) {
         this.setState({ passwordValid: false });
       } else {
         this.setState({ passwordValid: true });
       }
     } else {
-      if (event.target.value === '') {
-        this.setState({ [`${nameInput}Valid`]: false });
+      if (value === '') {
+        this.setState({ [`${name}Valid`]: false });
       }
-      if (event.target.value !== '') {
-        this.setState({ [`${nameInput}Valid`]: true });
+      if (value !== '') {
+        this.setState({ [`${name}Valid`]: true });
       }
     }
   };
