@@ -66,11 +66,7 @@ class RegisterPopUp extends Component {
     } = event;
     this.setState({ [name]: value });
     if (name === 'password') {
-      if (value.length < 8) {
-        this.setState({ passwordValid: false });
-      } else {
-        this.setState({ passwordValid: true });
-      }
+      this.setState({ passwordValid: value.length > 7 });
     } else {
       if (value === '') {
         this.setState({ [`${name}Valid`]: false });
