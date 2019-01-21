@@ -19,6 +19,7 @@ class App extends Component {
   state = {
     modalLogIn: false,
     modalSignIn: false,
+    update: false,
   };
 
   modalLogIn = value => {
@@ -35,25 +36,23 @@ class App extends Component {
   };
 
   validateToken = () => {
-    validation(this.props.userReducer).catch(() => {
+    validation().catch(() => {
       toastr.error('Authorized users only.');
     });
   };
 
   logExit = () => {
     this.props.authChange(false);
-    logOut(this.props.userReducer)
-      .then(response => {
-        console.log(response);
-        this.props.authentication({});
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    logOut().then(() => {
+      this.props.authentication({});
+    });
+    // eslint-disable-next-line no-undef
+    localStorage.clear();
   };
 
   render() {
-    if (this.props.userInfo.auth) {
+    // eslint-disable-next-line no-undef
+    if (localStorage.getItem('auth')) {
       this.validateToken();
       return (
         <div className="startWindow">
@@ -69,7 +68,7 @@ class App extends Component {
             <a href="Search" className="item-text">
               Search
             </a>
-            <div className="item-text" onClick={() => this.logExit()}>
+            <div className="item-text" onClick={this.logExit}>
               Log Out
             </div>
           </div>

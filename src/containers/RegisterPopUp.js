@@ -49,9 +49,17 @@ class RegisterPopUp extends Component {
     if (email.length > 3 && password.length > 7) {
       fetchRegister(firstName, lastName, email, password)
         .then(response => {
-          this.props.modalClose(false);
           this.props.authentication(response.headers);
           this.props.authChange(true);
+          /* eslint-disable no-undef */
+          localStorage.setItem('access-token', response.headers['access-token']);
+          localStorage.setItem('expiry', response.headers.expiry);
+          localStorage.setItem('token-type', response.headers['token-type']);
+          localStorage.setItem('uid', response.headers.uid);
+          localStorage.setItem('client', response.headers.client);
+          localStorage.setItem('auth', true);
+          /* eslint-enable no-undef */
+          this.props.modalClose(false);
         })
         .catch(error => {
           toastr.error(error);

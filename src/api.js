@@ -21,10 +21,28 @@ export function fetchRegister(firstName, lastName, email, password) {
   });
 }
 
-export function validation(userData) {
-  return axios.get(`${AUTH_API_URL}/validate_token`, { headers: userData });
+export function validation() {
+  return axios.get(`${AUTH_API_URL}/validate_token`, {
+    headers: {
+      /* eslint-disable no-undef */
+      'access-token': localStorage.getItem('access-token'),
+      'token-type': localStorage.getItem('token-type'),
+      uid: localStorage.getItem('uid'),
+      client: localStorage.getItem('client'),
+      /* eslint-enable no-undef */
+    },
+  });
 }
 
-export function logOut(userData) {
-  return axios.delete(`${AUTH_API_URL}/sign_out`, { headers: userData });
+export function logOut() {
+  return axios.delete(`${AUTH_API_URL}/sign_out`, {
+    headers: {
+      /* eslint-disable no-undef */
+      'access-token': localStorage.getItem('access-token'),
+      'token-type': localStorage.getItem('token-type'),
+      uid: localStorage.getItem('uid'),
+      client: localStorage.getItem('client'),
+      /* eslint-enable no-undef */
+    },
+  });
 }
