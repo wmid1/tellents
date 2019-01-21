@@ -60,8 +60,8 @@ class RegisterPopUp extends Component {
             emailValid: true,
           });
         })
-        .catch(() => {
-          toastr.error('Email already in use');
+        .catch(error => {
+          toastr.error(error);
           this.setState({ onSubmit: true });
         });
     }
