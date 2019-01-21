@@ -21,7 +21,7 @@ class RegisterPopUp extends Component {
     firstName: '',
     lastName: '',
     password: '',
-    onSubmit: true,
+    disabled: false,
     firstNameValid: true,
     lastNameValid: true,
     passwordValid: true,
@@ -44,7 +44,7 @@ class RegisterPopUp extends Component {
 
   postRegisterForm = event => {
     event.preventDefault();
-    this.setState({ onSubmit: false });
+    this.setState({ disabled: true });
     const { email, firstName, lastName, password } = this.state;
     if (email.length > 3 && password.length > 7) {
       fetchRegister(firstName, lastName, email, password)
@@ -52,24 +52,12 @@ class RegisterPopUp extends Component {
           this.props.modalClose(false);
           this.props.authentication(response.headers);
           this.props.authChange(true);
-          this.setState({
-            onSubmit: true,
-            firstNameValid: true,
-            lastNameValid: true,
-            passwordValid: true,
-            emailValid: true,
-          });
         })
         .catch(error => {
           toastr.error(error);
-          this.setState({ onSubmit: true });
+          this.setState({ disabled: false });
         });
     }
-  };
-
-  waitSubmitForm = event => {
-    event.preventDefault();
-    toastr.info('Waiting to submit the form.');
   };
 
   handleInputChange = event => {
@@ -101,13 +89,7 @@ class RegisterPopUp extends Component {
         <div className="popUp justify-content-center">
           <div className="modal-window">
             <div className="modal-header">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-                onClick={() => this.close()}
-              >
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.close}>
                 <span aria-hidden="true">×</span>
               </button>
             </div>
@@ -115,7 +97,7 @@ class RegisterPopUp extends Component {
               <div className="modal-title blue-color">Please Sign Up</div>
               <div className="modal-text">Join over 2 million tallents already using Tellents. Start now for free!</div>
               <div className="modal-form">
-                <form onSubmit={this.state.onSubmit ? this.postRegisterForm : this.waitSubmitForm}>
+                <form onSubmit={this.postRegisterForm}>
                   <div className="input-wrapper">
                     <input
                       type="text"
@@ -162,7 +144,9 @@ class RegisterPopUp extends Component {
                     <span className="error-message">Too short. Use at least 8 characters</span>
                   </div>
                   <div className="form-group">
-                    <input type="submit" value="➡ START NOW" className="btn btn-lg btn-primary login" />
+                    <button type="submit" disabled={this.state.disabled} className="btn btn-lg btn-primary btn-join">
+                      ➡ START NOW
+                    </button>
                   </div>
                 </form>
               </div>

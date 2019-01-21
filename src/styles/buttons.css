@@ -11,6 +11,11 @@
     width: -webkit-fill-available;
     height: 58px;
 }
+.btn-join {
+    display: block;
+    width: 100%;
+    height: 56px;
+}
 .btn:hover,
 .btn:focus,
 .btn.active,

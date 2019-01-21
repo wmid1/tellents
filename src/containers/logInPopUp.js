@@ -19,14 +19,14 @@ class LogInPopUp extends Component {
   state = {
     email: '',
     password: '',
-    onSubmit: true,
+    disabled: false,
     passwordValid: true,
     emailValid: true,
   };
 
   postLogInForm = event => {
     event.preventDefault();
-    this.setState({ onSubmit: false });
+    this.setState({ disabled: true });
     const { email, password } = this.state;
 
     if (email.length > 3 && password.length > 7) {
@@ -35,18 +35,12 @@ class LogInPopUp extends Component {
           this.props.modalClose(false);
           this.props.authentication(response.headers);
           this.props.authChange(true);
-          this.setState({ onSubmit: true, passwordValid: true, emailValid: true });
         })
         .catch(() => {
           toastr.error('Invalid login credentials. Please try again.');
-          this.setState({ onSubmit: true });
+          this.setState({ disabled: false });
         });
     }
-  };
-
-  waitSubmitForm = event => {
-    event.preventDefault();
-    toastr.info('Waiting to submit the form.');
   };
 
   handleInputChange = event => {
@@ -72,7 +66,6 @@ class LogInPopUp extends Component {
 
   close = () => {
     this.props.modalClose(false);
-    this.setState({ email: '', password: '', passwordValid: true, emailValid: true });
   };
 
   render() {
@@ -83,20 +76,14 @@ class LogInPopUp extends Component {
         <div className="popUp justify-content-center">
           <div className="modal-window">
             <div className="modal-header">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-                onClick={() => this.close()}
-              >
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.close}>
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div className="modal-body">
               <div className="modal-title">Login Into Your Account</div>
               <div className="modal-form">
-                <form onSubmit={this.state.onSubmit ? this.postLogInForm : this.waitSubmitForm}>
+                <form onSubmit={this.postLogInForm}>
                   <div className="input-wrapper">
                     <input
                       autoFocus="autofocus"
@@ -123,7 +110,14 @@ class LogInPopUp extends Component {
                     <span className="error-message">Too short. Use at least 8 characters</span>
                   </div>
                   <div className="form-group">
-                    <input type="submit" name="commit" value="Log In" className="btn btn-lg btn-primary login" />
+                    <button
+                      type="submit"
+                      name="commit"
+                      disabled={this.state.disabled}
+                      className="btn btn-lg btn-primary btn-join"
+                    >
+                      Log In
+                    </button>
                   </div>
                 </form>
               </div>
