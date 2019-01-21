@@ -99,7 +99,6 @@ class LogInPopUp extends Component {
                   <div className="input-wrapper">
                     <input
                       autoFocus="autofocus"
-                      ng-model="$ctrl.user.email"
                       id="user_email"
                       type="email"
                       className={this.state.emailValid ? 'form-control' : 'invalid'}
@@ -123,13 +122,7 @@ class LogInPopUp extends Component {
                     <span className="error-message">Too short. Use at least 8 characters</span>
                   </div>
                   <div className="form-group">
-                    <input
-                      type="submit"
-                      name="commit"
-                      value="Log In"
-                      ng-click="$ctrl.login(sessionsForm)"
-                      className="btn btn-lg btn-primary login"
-                    />
+                    <input type="submit" name="commit" value="Log In" className="btn btn-lg btn-primary login" />
                   </div>
                 </form>
               </div>

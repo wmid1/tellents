@@ -161,12 +161,7 @@ class RegisterPopUp extends Component {
                     <span className="error-message">Too short. Use at least 8 characters</span>
                   </div>
                   <div className="form-group">
-                    <input
-                      type="submit"
-                      value="➡ START NOW"
-                      ng-click="$ctrl.login(sessionsForm)"
-                      className="btn btn-lg btn-primary login"
-                    />
+                    <input type="submit" value="➡ START NOW" className="btn btn-lg btn-primary login" />
                   </div>
                 </form>
               </div>
