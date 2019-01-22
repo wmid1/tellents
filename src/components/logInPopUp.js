@@ -43,8 +43,8 @@ class LogInPopUp extends Component {
           localStorage.setItem('auth', true);
           modalClose();
         })
-        .catch(() => {
-          toastr.error('Invalid login credentials. Please try again.');
+        .catch(error => {
+          toastr.error(error.errors.full_messages[0]);
           this.setState({ disabled: false });
         });
     }

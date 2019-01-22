@@ -52,7 +52,7 @@ class RegisterPopUp extends Component {
           modalClose();
         })
         .catch(error => {
-          toastr.error(error);
+          toastr.error(error.response.data.errors.full_messages[0]);
           this.setState({ disabled: false });
         });
     }
