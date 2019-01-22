@@ -44,7 +44,7 @@ class LogInPopUp extends Component {
           modalClose();
         })
         .catch(error => {
-          toastr.error(error.errors.full_messages[0]);
+          toastr.error(error.response.data.errors[0]);
           this.setState({ disabled: false });
         });
     }
