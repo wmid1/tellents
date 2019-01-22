@@ -13,7 +13,6 @@ class LogInPopUp extends Component {
     authChange: PropTypes.func.isRequired,
     fetchSignIn: PropTypes.func,
     modalClose: PropTypes.func.isRequired,
-    modalLogIn: PropTypes.bool,
   };
 
   state = {
@@ -34,14 +33,12 @@ class LogInPopUp extends Component {
         .then(response => {
           this.props.authentication(response.headers);
           this.props.authChange(true);
-          /* eslint-disable no-undef */
           localStorage.setItem('access-token', response.headers['access-token']);
           localStorage.setItem('expiry', response.headers.expiry);
           localStorage.setItem('token-type', response.headers['token-type']);
           localStorage.setItem('client', response.headers.client);
           localStorage.setItem('uid', response.headers.uid);
           localStorage.setItem('auth', true);
-          /* eslint-enable no-undef */
           this.props.modalClose(false);
         })
         .catch(() => {
@@ -73,64 +70,59 @@ class LogInPopUp extends Component {
   };
 
   render() {
-    const { modalLogIn } = this.props;
-
-    if (modalLogIn) {
-      return (
-        <div className="popUp justify-content-center">
-          <div className="modal-window">
-            <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.close}>
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="modal-title">Login Into Your Account</div>
-              <div className="modal-form">
-                <form onSubmit={this.postLogInForm}>
-                  <div className="input-wrapper">
-                    <input
-                      autoFocus="autofocus"
-                      id="user_email"
-                      type="email"
-                      className={this.state.emailValid ? 'form-control' : 'invalid'}
-                      name="email"
-                      placeholder="Email"
-                      onChange={this.handleInputChange}
-                      required
-                    />
-                    <span className="error-message">Check your email</span>
-                  </div>
-                  <div className="input-wrapper">
-                    <input
-                      type="password"
-                      name="password"
-                      onChange={this.handleInputChange}
-                      className={this.state.passwordValid ? 'form-control' : 'invalid'}
-                      placeholder="Password"
-                      required
-                      minLength="8"
-                    />
-                    <span className="error-message">Too short. Use at least 8 characters</span>
-                  </div>
-                  <div className="form-group">
-                    <button
-                      type="submit"
-                      name="commit"
-                      disabled={this.state.disabled}
-                      className="btn btn-lg btn-primary btn-join"
-                    >
-                      Log In
-                    </button>
-                  </div>
-                </form>
-              </div>
+    return (
+      <div className="popUp justify-content-center">
+        <div className="modal-window">
+          <div className="modal-header">
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.close}>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div className="modal-body">
+            <div className="modal-title">Login Into Your Account</div>
+            <div className="modal-form">
+              <form onSubmit={this.postLogInForm}>
+                <div className="input-wrapper">
+                  <input
+                    autoFocus="autofocus"
+                    id="user_email"
+                    type="email"
+                    className={this.state.emailValid ? 'form-control' : 'invalid'}
+                    name="email"
+                    placeholder="Email"
+                    onChange={this.handleInputChange}
+                    required
+                  />
+                  <span className="error-message">Check your email</span>
+                </div>
+                <div className="input-wrapper">
+                  <input
+                    type="password"
+                    name="password"
+                    onChange={this.handleInputChange}
+                    className={this.state.passwordValid ? 'form-control' : 'invalid'}
+                    placeholder="Password"
+                    required
+                    minLength="8"
+                  />
+                  <span className="error-message">Too short. Use at least 8 characters</span>
+                </div>
+                <div className="form-group">
+                  <button
+                    type="submit"
+                    name="commit"
+                    disabled={this.state.disabled}
+                    className="btn btn-lg btn-primary btn-join"
+                  >
+                    Log In
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      );
-    }
-    return null;
+      </div>
+    );
   }
 }
 

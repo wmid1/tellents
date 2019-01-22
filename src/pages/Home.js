@@ -17,22 +17,25 @@ class Home extends Component {
   };
 
   state = {
-    modalLogIn: false,
-    modalSignIn: false,
+    isSignInModalOpen: false,
+    isSignUpModalOpen: false,
     update: false,
   };
 
-  modalLogIn = value => {
-    this.setState({ modalLogIn: value });
+  openSignInModal = () => {
+    this.setState({ isSignInModalOpen: true });
   };
 
-  modalSignIn = value => {
-    this.setState({ modalSignIn: value });
+  openSignUpModal = () => {
+    this.setState({ isSignUpModalOpen: true });
   };
 
-  modalClose = value => {
-    this.setState({ modalSignIn: value });
-    this.setState({ modalLogIn: value });
+  closeModalSignUp = () => {
+    this.setState({ isSignUpModalOpen: false });
+  };
+
+  closeModalSignIn = () => {
+    this.setState({ isSignInModalOpen: false });
   };
 
   validateToken = () => {
@@ -81,12 +84,11 @@ class Home extends Component {
         <h2>
           <b>Welcome!</b>
         </h2>
-        <LogInPopUp modalLogIn={this.state.modalLogIn} modalClose={this.modalClose} />
-        <RegisterPopUp modalSignIn={this.state.modalSignIn} modalClose={this.modalClose} />
-
+        {this.state.isSignInModalOpen && <LogInPopUp modalClose={this.closeModalSignIn} />}
+        {this.state.isSignUpModalOpen && <RegisterPopUp modalClose={this.closeModalSignUp} />}
         <div className="nav-btns flexbox justify-content-center">
           <button className="register-btn btn btn-bg-transparent btn-with-icon" type="button">
-            <span className="button-content" onClick={() => this.modalSignIn(true)}>
+            <span className="button-content" onClick={this.openSignUpModal}>
               <span className="icon icon-plus-button blue-color" />
               <b>Register</b>
             </span>
@@ -94,7 +96,7 @@ class Home extends Component {
           <button
             className="login-btn btn btn-bg-transparent btn-with-icon"
             type="button"
-            onClick={() => this.modalLogIn(true)}
+            onClick={this.openSignInModal}
           >
             <span className="button-content">
               <span className="icon icon-user2 blue-color" />
