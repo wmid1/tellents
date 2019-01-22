@@ -1161,6 +1161,7 @@ footer ul li a{
     border-radius: 30px;
 }
 .sign-up-modal input:valid + .error-message {
+    border-radius: 30px;
     text-align: left;
     display: block;
     
@@ -1172,25 +1173,25 @@ footer ul li a{
     border: solid 2px #cb001f;
 }
 .sign-up-modal .invalid  input:invalid {
+    border-radius: 30px;
     background-color: #fff1f5;
     border: solid 2px #cb001f;
 }
 .sign-up-modal input:invalid + .error-message {
+    border-radius: 30px;
     display: block;
     color: #cb001f;
 }
-/* .form-control, .invalid {
-    background-color: #fff1f5;
-    border: solid 2px #cb001f;
-} */
-
 .invalid + .error-message {
     display: block;
     color: #cb001f;
 } 
 .sign-up-modal, input:focus:invalid {
+    outline: 0;
+    border-radius: 30px;
     background-color: #fffaf1;
     border: solid 2px #f5a623;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 .sign-up-modal, input:focus:invalid + .error-message {
     display: block;

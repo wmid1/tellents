@@ -26,20 +26,22 @@ class LogInPopUp extends Component {
   postLogInForm = event => {
     event.preventDefault();
     this.setState({ disabled: true });
-    const { email, password } = this.state;
-
+    const {
+      props: { modalClose },
+      state: { email, password },
+    } = this;
     if (email.length > 3 && password.length > 7) {
       fetchSignIn(email, password)
         .then(response => {
-          this.props.authentication(response.headers);
-          this.props.authChange(true);
+          authentication(response.headers);
+          authChange(true);
           localStorage.setItem('access-token', response.headers['access-token']);
           localStorage.setItem('expiry', response.headers.expiry);
           localStorage.setItem('token-type', response.headers['token-type']);
           localStorage.setItem('client', response.headers.client);
           localStorage.setItem('uid', response.headers.uid);
           localStorage.setItem('auth', true);
-          this.props.modalClose(false);
+          modalClose();
         })
         .catch(() => {
           toastr.error('Invalid login credentials. Please try again.');
@@ -66,7 +68,7 @@ class LogInPopUp extends Component {
   };
 
   close = () => {
-    this.props.modalClose(false);
+    this.props.modalClose();
   };
 
   render() {

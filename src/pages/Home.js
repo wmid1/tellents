@@ -6,6 +6,7 @@ import { authentication, authChange } from '../actions/actions';
 import { validation, logOut } from '../api';
 import LogInPopUp from '../components/logInPopUp';
 import RegisterPopUp from '../components/RegisterPopUp';
+import Header from '../components/Header';
 import '../styles/landing-styles.css';
 
 class Home extends Component {
@@ -62,20 +63,10 @@ class Home extends Component {
     if (localStorage.getItem('auth')) {
       return (
         <div className="startWindow">
+          <Header />
           <h2>
             <b>Welcome!</b>
           </h2>
-          <div className="nav-btns flexbox justify-content-center">
-            <a href="Skills" className="item-text">
-              Skills
-            </a>
-            <a href="Search" className="item-text">
-              Search
-            </a>
-            <div className="item-text" onClick={this.logExit}>
-              Log Out
-            </div>
-          </div>
         </div>
       );
     }

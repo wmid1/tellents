@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/Header';
 import '../styles/landing-styles.css';
 
 class Skills extends Component {
@@ -18,19 +19,8 @@ class Skills extends Component {
   render() {
     return (
       <div className="startWindow">
-        <h2>
-          <b>Skills!</b>
-        </h2>
-
-        <div className="nav-btns flexbox justify-content-center">
-          <a href="./" className="item-text">
-            Start Page
-          </a>
-          <a href="Search" className="item-text">
-            Search
-          </a>
-        </div>
-
+        <Header />
+        <h2>This page is Skills</h2>
         <input
           className="form-control rounded mb-1 mt-3"
           type="text"

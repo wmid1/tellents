@@ -34,19 +34,22 @@ class RegisterPopUp extends Component {
   postRegisterForm = event => {
     event.preventDefault();
     this.setState({ disabled: true });
-    const { email, firstName, lastName, password } = this.state;
+    const {
+      props: { modalClose },
+      state: { email, firstName, lastName, password },
+    } = this;
     if (email.length > 3 && password.length > 7) {
       fetchRegister(firstName, lastName, email, password)
         .then(response => {
-          this.props.authentication(response.headers);
-          this.props.authChange(true);
+          authentication(response.headers);
+          authChange(true);
           localStorage.setItem('access-token', response.headers['access-token']);
           localStorage.setItem('expiry', response.headers.expiry);
           localStorage.setItem('token-type', response.headers['token-type']);
           localStorage.setItem('uid', response.headers.uid);
           localStorage.setItem('client', response.headers.client);
           localStorage.setItem('auth', true);
-          this.props.modalClose(false);
+          modalClose();
         })
         .catch(error => {
           toastr.error(error);

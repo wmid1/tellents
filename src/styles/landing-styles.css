@@ -187,6 +187,15 @@ body header  {
     text-decoration: none;
     cursor: pointer;
 }
+.nav-selected {
+    margin:0 5px 0 5px;
+    font-Weight: bold;
+    font-size: 20px;
+	padding: 10px;
+	color: rgba(55, 158, 255, 0.884);
+	text-decoration: none;
+	display: block;
+}
 .landing-header .header-title {
 	margin-bottom: 65px;
 }
