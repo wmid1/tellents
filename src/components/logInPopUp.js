@@ -133,6 +133,7 @@ class LogInPopUp extends Component {
     return null;
   }
 }
+
 function mapStateToProps(store) {
   return {
     userReducer: store.userReducer,

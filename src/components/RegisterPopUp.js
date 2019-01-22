@@ -30,16 +30,6 @@ class RegisterPopUp extends Component {
 
   close = () => {
     this.props.modalClose(false);
-    this.setState({
-      email: '',
-      firstName: '',
-      lastName: '',
-      password: '',
-      firstNameValid: true,
-      lastNameValid: true,
-      passwordValid: true,
-      emailValid: true,
-    });
   };
 
   postRegisterForm = event => {
@@ -51,14 +41,12 @@ class RegisterPopUp extends Component {
         .then(response => {
           this.props.authentication(response.headers);
           this.props.authChange(true);
-          /* eslint-disable no-undef */
           localStorage.setItem('access-token', response.headers['access-token']);
           localStorage.setItem('expiry', response.headers.expiry);
           localStorage.setItem('token-type', response.headers['token-type']);
           localStorage.setItem('uid', response.headers.uid);
           localStorage.setItem('client', response.headers.client);
           localStorage.setItem('auth', true);
-          /* eslint-enable no-undef */
           this.props.modalClose(false);
         })
         .catch(error => {
