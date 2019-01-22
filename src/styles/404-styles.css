@@ -1,0 +1,57 @@
+.err-404-page .main-top-nav {
+	margin-bottom: 0;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+.err-404-page .content {
+	margin-top: 0;
+	margin-bottom: 200px;
+}
+.err-404-title {
+	padding: 35px;
+	background-image: url(../images/404-bg@2x.png);
+	width: 100%;
+	text-align: center;
+	background-color: #15a4fa;
+}
+.err-404-title h2 {
+	margin: 0;
+	font-family: OpenSans, Arial, sans-serif;
+	font-size: 64px;
+	font-weight: 800;
+	line-height: 1.06;
+	color: #ffffff;
+}
+.err-404-content {
+	padding: 95px 20px;
+    text-align: center;
+	font-family: OpenSans, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.44;
+}
+.err-404-content h2 {
+	font-family: 'Lane-Narrow', Arial, sans-serif;;
+	font-size: 51px;
+	font-weight: normal;
+	line-height: 1.33;
+	margin: 15px;
+}
+.err-404-content .or-text {
+	padding: 30px;
+}
+.err-404-content .btn {
+	padding: 10px 65px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.err-404-content .btn span {
+	margin: auto 0;
+}
+.err-404-content .btn .icon {
+	font-size: 30px;
+	margin-right: 28px;
+}

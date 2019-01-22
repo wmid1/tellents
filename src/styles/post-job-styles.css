@@ -1,0 +1,112 @@
+.post-job-content {
+    padding: 0 30px;
+}
+.post-job-title {
+    font-size: 36px;
+    padding-top: 30px;
+    text-align: center;
+}
+.post-job-form {
+    padding: 0;
+    max-width: 910px;
+    margin: 5px auto;
+    border: none;
+    box-shadow: none;
+}
+.post-job-form .form-block {
+    text-align: center;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 30px 70px;
+}
+.post-job-form .form-block .form-block-wrapper {
+    max-width: 575px;
+    margin: 0 auto;
+    text-align: left;
+}
+.post-job-form .form-block:last-child {
+    border: none;
+}
+.post-job-form  .skill-block-title {
+    text-align: left;
+}
+.post-job-form  .skill-cat .skill-block-title {
+    color: #fff;
+    background-color: #15a4fa;
+    padding: 15px;
+    font-size: 16px;
+}
+.post-job-form .skill-cat .skill-block-title .icon {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+.post-job-form .skill-cat .skill-block-list {
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+.post-job-form .skill-cat .skill-block-list .checkbox-block {
+    width: 50%;
+    text-align: left;
+}
+.post-job-form .skill-cat .skill-block-list .checkbox-text {
+    color: #4b5053;
+    /*font-size: 14px;*/
+}
+.post-job-form .skill-block-list input:checked + label > .checkbox-text, 
+.post-job-form .skill-block-list .checkbox-block:hover .checkbox-text {
+    color: #15a4fa;
+}
+.post-job-form .skill-sub-block {
+    padding: 10px 10px 10px 40px;
+}
+.post-job-form .promo-sample-block > .radio-block > .radio {
+    margin-bottom: 30px;
+}
+.post-job-form .promo-sample-block .radio-block > .radio .radio-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4b5053;
+    line-height: 22px;
+}
+.post-job-form .promo-sample-block .radio-block > .radio .checkbox-sqw {
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    border-color: #15a4fa;
+}
+.post-job-form .promo-sample-block .radio-block > .radio .checkbox-sqw .icon {
+    font-size: 13px;
+}
+.post-job-form .promo-sample-block .radio-block > button {
+    margin: 15px 0 30px;
+}
+.post-job-form .form-block-section {
+    margin: 20px 0;
+}
+.post-job-form .form-block-section.col-50 {
+    width: 50%;
+}
+.post-job-form .form-block-section.col-100 {
+    width: 100%;
+}
+.post-job-form .form-block-section.col-30 {
+    width: 33%;
+}
+.post-job-form .form-block-section.finish-block {
+    margin: 35px 0;
+}
+.post-job-form .form-block-section .form-block-header{
+    margin-bottom: 15px;
+}
+.post-job-form .form-block-section .form-block-header > div {
+    margin: auto 0;
+}
+.post-job-form .form-block-section .form-block-title {
+    font-weight: bold;
+}
+.post-job-form .btn-block button{
+    margin: 10px 20px 10px 0;
+}
+.post-job-content + footer {
+    position: static;
+}

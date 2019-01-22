@@ -1,0 +1,287 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	
+}
+
+/* Small Devices, Tablets */ 
+@media only screen and (max-width : 768px) {
+	section {
+		padding: 30px 0;
+	}
+	.section-title {
+		padding: 35px 0;
+	}
+	.sign-up-block-title h2 {
+		font-size: 38px;
+	}
+	.sign-up-form input {
+		margin: 20px;
+	}
+	.landing-header .header-nav .wrapper {
+		padding: 0;
+	}
+	.landing-nav {
+		padding: 0 20px;
+	}
+	.landing-header .header-title h2 {
+		font-size: 54px;
+	}
+	.landing-header .header-title {
+		margin-bottom: 25px;
+	}
+	.landing-nav .nav-tablet {
+		display: none;
+		position: absolute;
+	    width: 100%;
+	    top: 105px;
+	    right: 0;
+	    left: 0;
+	    z-index: 100;
+	    background-color: #fff;
+	    border: 1px solid #d9dada;
+	    border-top-width: 0;
+	    -webkit-border-radius: 0 0 6px 6px;
+	    -moz-border-radius: 0 0 6px 6px;
+	    -ms-border-radius: 0 0 6px 6px;
+	    border-radius: 0 0 6px 6px;
+	    padding: 20px 20% 10px;
+	}
+	.landing-nav.menu-open .nav-tablet{
+		display: block;
+		padding: 20px 40px;
+	}
+	.landing-nav .nav-tablet > .nav-list {
+		margin-top: 10px;
+	}
+	.landing-header .nav-list-item {
+		margin: 0 10px;
+	}
+	.landing-nav .nav-mobile {
+		width: 100%;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		-webkit-justify-content: flex-end;
+		-moz-justify-content: flex-end;
+		justify-content: flex-end;	
+	}
+	.landing-nav .humburger-icon button {
+		margin-right: 0;
+	}
+	.landing-nav .humburger-icon {
+		display: block;
+	}
+	.landing-header .nav-list-item .item-text {
+		color: #15a4fa;
+	}
+	.landing-header .nav-list-item:hover {
+		border: none;
+		padding: 0;
+		top: 0;
+	}
+	.landing-header .nav-list-item:hover a {
+		color: #3e5a7f;
+	}
+	.header-body .wrapper {
+		display: block;
+	}
+	.header-body .wrapper > div {
+		width: 100%;
+		padding: 30px 0;
+		text-align: center;
+	}
+	.landing-header .header-img {
+		right: 0;
+		background-position: center;
+		padding-top: 0;
+	}
+	.ellipsis-icon-block {
+		margin: 67px auto 45px;
+	}
+	.steps-section .section-content .wrapper > .flexbox {
+		display: block;
+	}
+	.thumbnail-img-overlay-icon .icon {
+		font-size: 38px;
+	}
+	.thumbnail-img-overlay-icon .icon-free {
+		font-size: 30px;
+	}
+	.categories-section .section-content .wrapper {
+		padding: 0;
+	}
+	.category-item-block {
+		width: 33%;
+	}
+	.footer-nav .wrapper {
+		display: block;
+		text-align: center;
+	}
+	.footer-nav .footer-nav-list {
+		margin: 0 0 15px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 560px) {
+	.landing .wrapper {
+		padding: 0 20px;
+	}
+	.landing-nav {
+		font-size: 20px;
+	}
+	.landing-nav .nav-mobile {
+		display: none;
+		position: absolute;
+	    width: 100%;
+	    top: 105px;
+	    right: 0;
+	    left: 0;
+	    z-index: 100;
+	    background-color: #fff;
+	    border: 1px solid #d9dada;
+	    border-top-width: 0;
+	    -webkit-border-radius: 0 0 6px 6px;
+	    -moz-border-radius: 0 0 6px 6px;
+	    -ms-border-radius: 0 0 6px 6px;
+	    border-radius: 0 0 6px 6px;
+	    padding: 20px 10px 10px;
+	}
+	.landing-nav .nav-mobile > .user-box,
+	.landing-nav .nav-mobile > div {
+		margin: auto;
+	}
+	.landing-nav.menu-open .nav-mobile{
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -webkit-flexbox;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: -moz-flex;
+	    display: -ms-flex;
+	    display: -o-flex;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -moz-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	}
+	.landing-nav .nav-tablet {
+		display: block;
+		position: static;
+	    width: 100%;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    border: none;
+	    -webkit-border-radius: 0;
+	    -moz-border-radius: 0;
+	    -ms-border-radius: 0;
+	    border-radius: 0;
+	    -webkit-box-ordinal-group: 1 + 1;
+		-webkit-order: 1;
+		-moz-order: 1;
+		-ms-flex-order: 1;
+		order: 1;
+		padding: 10px 0;
+	}
+	.landing-nav .nav-list {
+		display: block;
+		padding: 10px 0;
+	}
+	.landing-nav .nav-list-item {
+		width: 100%;
+		text-align: center;
+	}
+	.landing-nav .humburger-icon button, 
+	.landing-nav .humburger-icon button:hover, 
+	.landing-nav .humburger-icon button:focus, 
+	.landing-nav .humburger-icon button.active {
+		font-size: 30px;
+	}
+	.landing-header .header-body  .wrapper {
+		padding: 0;
+	}
+	.header-body .wrapper > .header-info-block {  
+		padding: 30px 15px;
+	}
+	.landing-header .header-img {
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+	.sign-up-form input, .sign-up-form button {
+		width: 100%;
+	}
+	.category-item-block {
+		width: 50%;
+	}
+	.landing-header .nav-btns .btn {
+		border-right-color: #3e5a7f;
+		color: #3e5a7f;
+		font-size: 20px;
+	}
+	.landing-header .nav-btns .btn:hover {
+		color: #3e5a7f;
+	}
+	.sign-up-form input {
+		margin: 20px 1%;
+	}
+	.thumbnail-img-overlay-icon {
+		right: -15px;
+	}
+	.thumbnail-img-overlay-icon .icon {
+		font-size: 32px;
+	}
+	.thumbnail-img-overlay-icon .icon-free {
+		font-size: 25px;
+	}
+	.thumbnail-descr {
+		padding: 22px;
+	}
+	.footer-nav-list li {
+		margin: 10px 1%;
+		width: 30%;
+	}
+	.category-item-block:hover,
+	.category-item-block:focus {
+		-webkit-transform: scale(1);
+				transform: scale(1);
+		z-index: 2;
+	}
+	.landing-header .search-form {
+		padding-top: 56px;
+	}
+	.landing-header .my-search-form .search-filter {
+		top: -56px;
+		left: 0;
+		margin: auto;
+	}
+	.landing-header .my-search-form .radio label {
+		background-color: transparent;
+	}
+	.landing-header .my-search-form .radio label .radio-text {
+		color: #f3f3f3;
+	}
+	.landing-header .my-search-form .radio input:checked + label,
+	.landing-header .my-search-form .radio input:checked + label:hover  {
+		background-color: transparent;
+		color: #15a4fa;
+	}
+	.landing-header .my-search-form .radio .icon ,
+	.landing-header .my-search-form .radio input:checked + label .radio-text {
+		 color: #15a4fa;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 420px) {
+
+}

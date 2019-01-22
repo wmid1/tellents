@@ -4,10 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/.vscode
 # testing
 /coverage
-
+/src/home-page-without-results.html
+/src/landing.html
 # production
 /build
 
