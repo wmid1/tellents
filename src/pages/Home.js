@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import toastr from 'toastr';
 import { authentication, authChange } from '../actions/actions';
-import { validation, logOut } from '../api';
-import LogInPopUp from '../components/logInPopUp';
+import { validation } from '../api';
+import LogInPopUp from '../components/LogInPopUp';
 import RegisterPopUp from '../components/RegisterPopUp';
 import Header from '../components/Header';
 import '../styles/landing-styles.css';
@@ -43,14 +43,6 @@ class Home extends Component {
     validation().catch(() => {
       toastr.error('Authorized users only.');
     });
-  };
-
-  logExit = () => {
-    this.props.authChange(false);
-    logOut().then(() => {
-      this.props.authentication({});
-    });
-    localStorage.clear();
   };
 
   componentDidMount() {
