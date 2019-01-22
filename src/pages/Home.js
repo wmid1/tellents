@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import toastr from 'toastr';
 import { authentication, authChange } from '../actions/actions';
 import { validation, logOut } from '../api';
-import LogInPopUp from '../containers/logInPopUp';
-import RegisterPopUp from '../containers/RegisterPopUp';
+import LogInPopUp from '../components/logInPopUp';
+import RegisterPopUp from '../components/RegisterPopUp';
 import '../styles/landing-styles.css';
 
-class App extends Component {
+class Home extends Component {
   static propTypes = {
     userReducer: PropTypes.object,
     userInfo: PropTypes.object,
@@ -46,21 +46,22 @@ class App extends Component {
     logOut().then(() => {
       this.props.authentication({});
     });
-    // eslint-disable-next-line no-undef
     localStorage.clear();
   };
 
-  render() {
-    // eslint-disable-next-line no-undef
+  componentDidMount() {
     if (localStorage.getItem('auth')) {
       this.validateToken();
+    }
+  }
+
+  render() {
+    if (localStorage.getItem('auth')) {
       return (
         <div className="startWindow">
           <h2>
             <b>Welcome!</b>
           </h2>
-          <LogInPopUp modalLogIn={this.state.modalLogIn} modalClose={this.modalClose} />
-          <RegisterPopUp modalSignIn={this.state.modalSignIn} modalClose={this.modalClose} />
           <div className="nav-btns flexbox justify-content-center">
             <a href="Skills" className="item-text">
               Skills
@@ -120,4 +121,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(App);
+)(Home);
