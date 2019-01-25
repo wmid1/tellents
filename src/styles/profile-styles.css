@@ -348,7 +348,7 @@
 .my-about-info .price-info:hover .edit-btn {
     opacity: 1;
 }
-.my-about-info .soc-link {
+.my-about-info .soc-a {
     display: inline-block;
     font-size: 25px;
     padding: 5px 9px;
@@ -356,24 +356,24 @@
     text-decoration: none;
     cursor: pointer;
 }
-.my-about-info .soc-link .icon {
+.my-about-info .soc-a .icon {
     -webkit-transition: all ease 0.25s;
     transition: all ease 0.25s;
 }
-.my-about-info .soc-link:hover .icon-dribbble,
-.my-about-info .soc-link:focus .icon-dribbble {
+.my-about-info .soc-a:hover .icon-dribbble,
+.my-about-info .soc-a:focus .icon-dribbble {
     color: #ff699f;
 }
-.my-about-info .soc-link:hover .icon-behance,
-.my-about-info .soc-link:focus .icon-behance {
+.my-about-info .soc-a:hover .icon-behance,
+.my-about-info .soc-a:focus .icon-behance {
     color: #009bd5;
 }
-.my-about-info .soc-link:hover .icon-facebook,
-.my-about-info .soc-link:focus .icon-facebook {
+.my-about-info .soc-a:hover .icon-facebook,
+.my-about-info .soc-a:focus .icon-facebook {
     color: #23599a;
 }
-.my-about-info .soc-link:hover .icon-twitter,
-.my-about-info .soc-link:focus .icon-twitter {
+.my-about-info .soc-a:hover .icon-twitter,
+.my-about-info .soc-a:focus .icon-twitter {
     color: #00bcff;
 }
 .my-about-info .section-group {

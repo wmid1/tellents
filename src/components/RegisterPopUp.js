@@ -9,8 +9,8 @@ import '../styles/home-styles.css';
 class RegisterPopUp extends Component {
   static propTypes = {
     userReducer: PropTypes.object,
-    authentication: PropTypes.func.isRequired,
-    authChange: PropTypes.func.isRequired,
+    authentications: PropTypes.func.isRequired,
+    authChanges: PropTypes.func.isRequired,
     fetchRegister: PropTypes.func,
     modalClose: PropTypes.func.isRequired,
   };
@@ -35,19 +35,21 @@ class RegisterPopUp extends Component {
     event.preventDefault();
     this.setState({ disabled: true });
     const {
-      props: { modalClose },
+      props: { modalClose, authentications, authChanges },
       state: { email, firstName, lastName, password },
     } = this;
     if (email.length > 3 && password.length > 7) {
       fetchRegister(firstName, lastName, email, password)
         .then(response => {
-          authentication(response.headers);
-          authChange(true);
+          authentications(response.headers);
+          authChanges(true);
           localStorage.setItem('access-token', response.headers['access-token']);
           localStorage.setItem('expiry', response.headers.expiry);
           localStorage.setItem('token-type', response.headers['token-type']);
           localStorage.setItem('uid', response.headers.uid);
           localStorage.setItem('client', response.headers.client);
+          localStorage.setItem('full_name', response.data.data.full_name);
+          localStorage.setItem('user_avatar_url', response.data.data.image.url);
           localStorage.setItem('auth', true);
           modalClose();
         })
@@ -153,8 +155,8 @@ function mapStateToProps(store) {
   };
 }
 const mapDispatchToProps = dispatch => ({
-  authentication: headers => dispatch(authentication(headers)),
-  authChange: auth => dispatch(authChange(auth)),
+  authentications: headers => dispatch(authentication(headers)),
+  authChanges: auth => dispatch(authChange(auth)),
 });
 
 export default connect(
