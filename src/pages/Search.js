@@ -12,7 +12,6 @@ class Search extends Component {
   };
 
   handleSubmit = () => {
-    // const username = this.state.value;
     this.setState({ value: '' });
   };
 

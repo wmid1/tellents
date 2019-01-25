@@ -12,7 +12,6 @@ class Skills extends Component {
   };
 
   handleSubmit = () => {
-    // const username = this.state.value;
     this.setState({ value: '' });
   };
 
