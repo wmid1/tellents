@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import LogInPopUp from '../components/LogInPopUp';
 import RegisterPopUp from '../components/RegisterPopUp';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import '../styles/landing-styles.css';
 
 class Home extends Component {
