@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import toastr from 'toastr';
-import ClickOutHandler from 'react-onclickout';
-import { authentication, authChange } from '../actions/actions';
-import { logOut, validation } from '../api';
-import '../styles/header.css';
+import { authentication, authChange } from '../../actions/actions';
+import { validation } from '../../api';
+import DropdownUserLinks from './DropdownUserLinks';
+import DropdownNavLinks from './DropdownNavLinks';
+import '../../styles/header.css';
 
 class Header extends Component {
   static propTypes = {
@@ -37,14 +38,6 @@ class Header extends Component {
     this.setState({ dropdownOpen: false });
   };
 
-  logExit = () => {
-    this.props.authChange(false);
-    logOut().then(() => {
-      this.props.authentication({});
-    });
-    localStorage.clear();
-  };
-
   validateToken = () => {
     validation()
       .then(response => {
@@ -63,7 +56,7 @@ class Header extends Component {
 
   render() {
     const { dropdownOpen, linkDownOpen } = this.state;
-    const { viewDropdown, viewLinkDown, closeDropdown, closeLinkDown, logExit } = this;
+    const { viewDropdown, viewLinkDown, closeDropdown, closeLinkDown } = this;
     const userBox = (
       <div className="user-box">
         <div className="notifications">
@@ -77,26 +70,7 @@ class Header extends Component {
               <span className="caret" />
             </div>
           </Link>
-          {dropdownOpen && (
-            <ClickOutHandler onClickOut={closeDropdown}>
-              <ul className="dropdown-menu-down">
-                <li className="items-menu">
-                  <Link to="#">Action</Link>
-                </li>
-                <li className="items-menu">
-                  <Link to="#">Another action</Link>
-                </li>
-                <li className="items-menu">
-                  <Link to="#">Something else here</Link>
-                </li>
-                <li className="items-menu no-border">
-                  <Link to="" onClick={logExit}>
-                    Log Out
-                  </Link>
-                </li>
-              </ul>
-            </ClickOutHandler>
-          )}
+          {dropdownOpen && <DropdownUserLinks closeDropdown={closeDropdown} />}
         </div>
       </div>
     );
@@ -160,33 +134,7 @@ class Header extends Component {
             <span className="icon icon-menu" />
           </button>
         </div>
-        {linkDownOpen && (
-          <ClickOutHandler onClickOut={closeLinkDown}>
-            <section className="nav-tablet-down justify-space-between">
-              <div className="user-box-down">{userBox}</div>
-              {searchForm}
-              <div className="nav-list">
-                <ul className="flexbox justify-space-between">
-                  <li>
-                    <NavLink exact to="" className="item-text" activeClassName="nav-selected">
-                      Home
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/Skills" className="item-text" activeClassName="nav-selected">
-                      Skills
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/Search" className="item-text" activeClassName="nav-selected">
-                      Search
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </ClickOutHandler>
-        )}
+        {linkDownOpen && <DropdownNavLinks closeLinkDown={closeLinkDown} userBox={userBox} searchForm={searchForm} />}
         <section className="nav-mobile flexbox justify-space-between">
           <section className="nav-tablet flexbox justify-space-center">
             {searchForm}
