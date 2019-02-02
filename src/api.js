@@ -31,6 +31,44 @@ export function validation() {
     },
   });
 }
+export function takeUser() {
+  return axios.get(`${BASE_API_URL}/api//v1/profile/skills/user`, {
+    headers: {
+      'access-token': localStorage.getItem('access-token'),
+      'token-type': localStorage.getItem('token-type'),
+      uid: localStorage.getItem('uid'),
+      client: localStorage.getItem('client'),
+    },
+  });
+}
+export function setUserSkills(skills) {
+  return axios.post(
+    `${BASE_API_URL}/api/v1/profile/skills`,
+    {
+      categories: skills,
+    },
+    {
+      headers: {
+        'access-token': localStorage.getItem('access-token'),
+        'token-type': localStorage.getItem('token-type'),
+        uid: localStorage.getItem('uid'),
+        client: localStorage.getItem('client'),
+        expiry: localStorage.getItem('expiry'),
+      },
+    },
+  );
+}
+
+export function searchTags(query) {
+  return axios.get(`${BASE_API_URL}/api//v1/profile/skills/search?q=${query}`, {
+    headers: {
+      'access-token': localStorage.getItem('access-token'),
+      'token-type': localStorage.getItem('token-type'),
+      uid: localStorage.getItem('uid'),
+      client: localStorage.getItem('client'),
+    },
+  });
+}
 
 export function logOut() {
   return axios.delete(`${AUTH_API_URL}/sign_out`, {

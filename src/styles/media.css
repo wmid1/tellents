@@ -1,3 +1,4 @@
+
 @media only screen and (min-width : 769px) {
     .main-top-nav .humburger-icon {
 		display: none
@@ -7,6 +8,15 @@
     }
     .nav-tablet-down {
         display: none;
+    }
+
+    /* page Skills */
+    .nav {
+        display: block;
+    }
+    .step-one {
+        display: flex;
+        text-align: left;
     }
 }
 
@@ -20,12 +30,22 @@
         text-align: left;
     }
 }
+@media only screen and (min-width : 421px) {
+
+    /* page Skills */
+    .nav {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.home-page .right-sidebar {
 		display: none;
     }
 }
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -311,7 +331,11 @@
 	}
 	.skill-test-block .work-info .work-additional {
 		margin-bottom: 15px;
-	}
+    }
+    .step-one {
+        display: block;
+        text-align: left;
+    }
 	/*open-jobs tab-panel - end*/
 
 	/*PROMO- START*/
@@ -408,7 +432,7 @@
 	}
 	#skills .skill-subcat .skill-block,
 	#skills .skill-sub-block {
-		padding: 0;
+		padding: 20px;
 	}
 	#skills .skill-sub-block {
 		max-width: 100%;

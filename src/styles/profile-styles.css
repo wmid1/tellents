@@ -33,6 +33,10 @@
     margin-bottom: 0;
 }
 .my-sidebar>li>a{
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    display: block;
     color: #7f7f7f;
     font-size: 12px;
     background-color: #fff;
@@ -50,6 +54,7 @@
     margin-bottom: 5px;
 }
 .my-sidebar>li:hover>a,
+.nav-presentation,
 .my-sidebar>li.active>a,
 .my-sidebar>li.active>a:focus,
 .my-sidebar>li:hover>a:hover,
@@ -57,6 +62,8 @@
     color: #fff;
     background-color: #15a4fa;
 }
+
+
     /*right-col - end*/
 
     /*left-col - start*/
@@ -2034,6 +2041,7 @@ textarea.comments-area {
 #skills.step-1-open .step-1,
 #skills.step-2-open .step-2,
 #skills.step-3-open .step-3 {
+    text-align: left;
     display: block;
 }
 #skills.step-2-open .step-2-btn,
@@ -2069,17 +2077,17 @@ textarea.comments-area {
     display: block;
 }
 #skills .skill-block-list {
+    text-align: left;
     margin: 10px 0 15px;
 }
 #skills .skill-subcat {
-    margin: 0 30px;
+    text-align: left;
     border-bottom: 1px solid #dadee1;
 }
 #skills .skill-subcat:last-child {
     border-bottom: 0;
 }
 .skill-subcat {
-    padding-top: 23px;
     padding-bottom: 23px;
 } 
 .skill-subcat .skill-block {
@@ -2123,13 +2131,11 @@ textarea.comments-area {
     margin-top: -8px;
     right: 10px;
 }
-.skill-tags-block {
-    margin-top: 18px;
-}
 #skills .step-3 .skill-tags-block {
     margin: 0;
 }
 #skills .skill-block-footer {
+    margin-left: 30px;
     font-size: 0;
 }
 #skills .skill-block-footer a,
@@ -2217,6 +2223,47 @@ textarea.comments-area {
     font-size: 13px;
     color: #7f7f7f;
     display: none;
+}
+.close-tag{
+    float: right;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 0.5;
+    color: #6f6f71;
+    margin-left: 2px;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.btn-next{
+    position: absolute;
+    left: 110px;
+}
+.dropdown-tags{
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+    margin-top: 0px;
+    background-color: #fff;
+    min-width: 320px;
+    padding: 0;
+    border: 1px solid #008ed6;
+    list-style-type: none;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+.dropdown-tag{
+    cursor: pointer;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}
+.dropdown-tag:hover{
+    background-color: #008ed6;
+    color: white;
 }
 
 /*skills - end*/
