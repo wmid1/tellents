@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import reactStringReplace from 'react-string-replace';
 import onClickOutside from 'react-onclickoutside';
-import { searchTags } from '../api';
-import { setQueryTags, setTag } from '../actions/actions';
-import '../styles/styles.css';
+import { searchTags } from '../../api';
+import { setQueryTags, setTag } from '../../actions/actions';
+import '../../styles/styles.css';
 
 class SearchTags extends Component {
   static propTypes = {
