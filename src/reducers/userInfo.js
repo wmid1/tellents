@@ -1,9 +1,12 @@
+import { setUserSkills } from '../api';
+
 const initialState = {
   auth: false,
   professionCategories: [],
   selectedSkill: [],
   tags: [],
   categories: [],
+  links: ['overview', 'messages', 'jobs', 'promo', 'skills', 'saved', 'media', 'accounts', 'profile'],
 };
 
 export default function(state = initialState, action) {
@@ -51,6 +54,9 @@ export default function(state = initialState, action) {
       const categories = profCategories
         .map(skill => {
           if (skill.selected) {
+            if (skill.id === action.payload) {
+              return null;
+            }
             return {
               id: skill.id,
               skill_tags: skill.skill_tags,
@@ -67,7 +73,7 @@ export default function(state = initialState, action) {
           return null;
         })
         .filter(x => x !== undefined && x !== null);
-
+      setUserSkills(categories);
       return {
         ...state,
         professionCategories: profCategories,
