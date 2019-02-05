@@ -50,6 +50,7 @@
     transition: all ease 0.25s;
 }
 .my-sidebar>li>a .icon {
+    text-transform: capitalize;
     font-size: 25px;
     margin-bottom: 5px;
 }

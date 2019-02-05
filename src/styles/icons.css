@@ -3,7 +3,9 @@ blue - color: #15a4fa;
 green - color: #1dd459;
 ***/
 
-
+a{
+    text-transform: capitalize;
+}
 .icon{
     display: block;
 }
