@@ -1,36 +1,31 @@
+/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import '../styles/landing-styles.css';
+import Header from '../components/header/Header';
+import SkillBox from '../components/skillBox/SkillBox';
+import SkillLinks from '../components/skillBox/SkillLinks';
+import '../styles/styles.css';
 
 class Skills extends Component {
-  state = {
-    value: '',
-  };
-
-  handleChange = event => {
-    this.setState({ value: event.target.value });
-  };
-
-  handleSubmit = () => {
-    // const username = this.state.value;
-    this.setState({ value: '' });
-  };
-
   render() {
     return (
       <div className="startWindow">
         <Header />
-        <h2>This page is Skills</h2>
-        <input
-          className="form-control rounded mb-1 mt-3"
-          type="text"
-          name="user"
-          pattern=".{3,}"
-          required
-          placeholder="Your name"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
+        <div className="content">
+          <div className="container-fluid">
+            <div className="panel panel-default my-main-panel">
+              <div className="panel-body">
+                <div className="flexbox">
+                  <div className="right-col">
+                    <SkillLinks />
+                  </div>
+                  <div className="left-col">
+                    <SkillBox />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

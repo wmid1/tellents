@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import '../styles/landing-styles.css';
 
 class Search extends Component {
@@ -12,7 +12,6 @@ class Search extends Component {
   };
 
   handleSubmit = () => {
-    // const username = this.state.value;
     this.setState({ value: '' });
   };
 

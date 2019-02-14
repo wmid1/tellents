@@ -6,12 +6,22 @@
 @import '~toastr/toastr.scss';
 
 html, body,
-body section,
-body header  {
+body,
+body, header  {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -.25px;
 	min-height: 100vh;
     height: auto;
     width: 100%;
     overflow:auto;
+}
+section{
+    min-height: 75px;
+    height: auto;
+    width: 100%;
 }
 .landing .wrapper {
 	max-width: 1240px;
@@ -29,15 +39,27 @@ body header  {
     text-align: -webkit-center;
     width:100%;
     min-height:100%;
-    background-color: #fafcfcf7;
-    overflow:hidden;
-    position:fixed;
+    background-color: #eeeeee;;
+    overflow:auto;
     top:0px;
     z-index: 5;
-    padding:20px;  
+    padding:0;  
     color: rgb(22, 45, 59);
 }
 
+.home-window{
+    z-index: 5;
+    padding: 48px;
+    background-color:#fff;
+    width: 55%;
+    height: 25vw;
+    margin-top: 25px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #e5e5e5;
+    border: 1px solid #0000001c;
+}
 .btn-secondary {
     color: rgb(22, 45, 59);
       background-color: #ebedf1bd;
@@ -98,7 +120,7 @@ body header  {
 /*SIGN-UP-FORM - END ===== COMMON*/
 
 /*HEADER - START*/
-/* .landing-header {
+ .landing-header {
 	background-color: #263c58;
 	color: #fff;
 	min-height: 100vh;
@@ -114,7 +136,7 @@ body header  {
 	font-size: 14px;
 	font-weight: 600;
 	border-bottom: 2px solid rgba(255, 255, 255,.27);
-} */
+}
 .landing-nav .logo,
 .landing-nav .nav-btns{
     width: auto;
@@ -175,27 +197,39 @@ body header  {
 	padding-bottom: 1px;
 }
 .item-text{
+    font-size: initial;
     margin:0 5px 0 5px;
-    font-size: 20px;
-	padding: 10px;
-	color: rgba(13, 67, 117, 0.884);
-	text-decoration: none;
-	display: block;
-} 
-.item-text:hover {
-    color: #15a4fa;
+    color: #768b98;
+    text-transform: uppercase;
+    padding: 0;
     text-decoration: none;
-    cursor: pointer;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+} 
+.item-text .caret{
+    margin-top: -3px;
+    margin-left: 5px;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    right: 50%;
+    margin-right: -10px;
+    top: -17px;
+    bottom: -20px;
+    border: 12px solid transparent;
+    border-top-color: #c7c7c7;
 }
+
+
 .nav-selected {
-    margin:0 5px 0 5px;
-    font-Weight: bold;
-    font-size: 20px;
-	padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
 	color: rgba(55, 158, 255, 0.884);
-	text-decoration: none;
-	display: block;
 }
+
+
 .landing-header .header-title {
 	margin-bottom: 65px;
 }
@@ -355,11 +389,6 @@ body header  {
 
 
 /*SECTIONS - START*/
-section {
-	/*padding: 100px 0;*/
-	padding: 70px 0;
-	background-color: #f0f4f5;
-}
 .section-title {
 	padding: 45px 0;
 	text-align: center;
@@ -1099,3 +1128,5 @@ section {
 	}
 
 }
+
+@import 'media.css';

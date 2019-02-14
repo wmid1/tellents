@@ -13,4 +13,6 @@
 @import url('FAQ-styles.css');
 @import url('404-styles.css');
 
+@import 'media.css';
+
 @import '~toastr/toastr.scss';

@@ -1,9 +1,51 @@
+
+@media only screen and (min-width : 769px) {
+    .main-top-nav .humburger-icon {
+		display: none
+    }
+    .main-top-nav .search-form .my-search-form input{
+        opacity: 0;
+    }
+    .nav-tablet-down {
+        display: none;
+    }
+
+    /* page Skills */
+    .nav {
+        display: block;
+    }
+    .step-one {
+        display: flex;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width : 561px) {
+    .user-box-down{
+        display: none;
+    }
+    .dropdown-menu-down{
+        right: 10px;
+        top: 50px;
+        text-align: left;
+    }
+}
+@media only screen and (min-width : 421px) {
+
+    /* page Skills */
+    .nav {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.home-page .right-sidebar {
 		display: none;
-	}
+    }
 }
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -24,7 +66,7 @@
 	.similar-profiles .panel {
 		margin-left: 2%;
 		margin-right: 2%;
-	}
+    }
 /*HOME-PAGE END*/
 	
 }
@@ -125,7 +167,8 @@
 	}
 	.main-top-nav.menu-open section.nav-tablet{
 		display: block;
-	}
+    }
+   
 	.main-top-nav .search-form .my-search-form input,
 	.main-top-nav .search-form .search-filter .radio {
 		opacity: 1;
@@ -145,7 +188,44 @@
 	}
 	.main-top-nav .humburger-icon {
 		display: block;
-	}
+    }
+    .main-top-nav .humburger-icon button,
+    .main-top-nav .humburger-icon button:hover,
+    .main-top-nav .humburger-icon button:focus,
+    .main-top-nav .humburger-icon button.active {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        font-size: 20px;
+        color: #15a4fa;
+        padding: 5px;
+        position: absolute;
+        right: 190px;
+        top:23px;
+    }
+    .main-top-nav section.nav-mobile > .user-box {
+        margin: auto 5px;
+        right: 10px;
+        top: 19px;
+        position: absolute;
+    }
+    .nav-tablet-down{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 76px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #fff;
+        border: 1px solid #d9dada;
+        border-top-width: 0;
+        -webkit-border-radius: 0 0 6px 6px;
+        -moz-border-radius: 0 0 6px 6px;
+        -ms-border-radius: 0 0 6px 6px;
+        border-radius: 0 0 6px 6px;
+        padding: 20px 20% 10px;
+    }
 	/*main-top-nav - end*/
 
 	/*open-jobs tab-panel - start*/
@@ -251,7 +331,11 @@
 	}
 	.skill-test-block .work-info .work-additional {
 		margin-bottom: 15px;
-	}
+    }
+    .step-one {
+        display: block;
+        text-align: left;
+    }
 	/*open-jobs tab-panel - end*/
 
 	/*PROMO- START*/
@@ -348,7 +432,7 @@
 	}
 	#skills .skill-subcat .skill-block,
 	#skills .skill-sub-block {
-		padding: 0;
+		padding: 20px;
 	}
 	#skills .skill-sub-block {
 		max-width: 100%;
@@ -510,11 +594,13 @@
 	}
 	.home-page .job-box-block .caret-top {
 		background-color: #f6f6f6;
-	}
+    }
+    
 /*HOME-PAGE END*/
 
 /*PROFILE-PAGE START*/	
-	/*main-top-nav - start*/
+    /*main-top-nav - start*/
+    
 	.main-top-nav section.nav-mobile {
 		display: none;
 		position: absolute;
@@ -531,7 +617,8 @@
 	    -ms-border-radius: 0 0 6px 6px;
 	    border-radius: 0 0 6px 6px;
 	    padding: 20px 10px 10px;
-	}
+    }
+    
 	.main-top-nav section.nav-mobile > .user-box,
 	.main-top-nav section.nav-mobile > div {
 		margin: auto;
@@ -578,16 +665,49 @@
 		width: 100%;
 		text-align: center;
 	}
-	.main-top-nav .humburger-icon button, 
-	.main-top-nav .humburger-icon button:hover, 
-	.main-top-nav .humburger-icon button:focus, 
-	.main-top-nav .humburger-icon button.active {
-		font-size: 30px;
-	}
+	.main-top-nav .humburger-icon button,
+    .main-top-nav .humburger-icon button:hover,
+    .main-top-nav .humburger-icon button:focus,
+    .main-top-nav .humburger-icon button.active {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        font-size: 30px;
+        color: #15a4fa;
+        padding: 5px;
+        position: absolute;
+        right: 10px;
+        top:18px;
+    }
 	.main-top-nav .user-box .user-box-nav .dropdown-menu {
 		right: -100%;
 		text-align: center;
-	}
+    }
+    .nav-tablet-down{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 76px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #fff;
+        border: 1px solid #d9dada;
+        border-top-width: 0;
+        -webkit-border-radius: 0 0 6px 6px;
+        -moz-border-radius: 0 0 6px 6px;
+        -ms-border-radius: 0 0 6px 6px;
+        border-radius: 0 0 6px 6px;
+        padding: 20px 20% 10px;
+    }
+    .user-box-down{
+        padding: 10px 0;
+    }
+    .dropdown-menu-down {
+        right: -83px;
+        top: 37px;
+        text-align: center;
+    }
 	/*main-top-nav - end*/
 	#my-jobs .my-central-info-nav {
 		width: 100%;
@@ -932,6 +1052,10 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px) {
+    .dropdown-menu-down {
+        left: auto;
+        top: 26px;
+    }
 /*PROFILE-PAGE START*/
 	.my-main-panel {
 	    background-color: transparent;
@@ -955,7 +1079,9 @@
 	.my-tab,
 	.my-sidebar>li>a {
 		-webkit-box-shadow: 0 0 2px rgba(0,0,0,.09);
-		box-shadow: 0 0 2px rgba(0,0,0,.09);
+        box-shadow: 0 0 2px rgba(0,0,0,.09);
+        text-transform: capitalize;
+
 	}
 	.my-sidebar {
 		border: none;
@@ -972,7 +1098,9 @@
 		-webkit-border-radius: 6px;
 	    -moz-border-radius: 6px;
 	    -ms-border-radius: 6px;
-	    border-radius: 6px;
+        border-radius: 6px;
+        text-transform: capitalize;
+
 	}
 	.my-sidebar>li:first-child>a {
 		margin-left: 0;

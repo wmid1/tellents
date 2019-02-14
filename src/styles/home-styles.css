@@ -2,6 +2,7 @@
 @import url('chat-window.css');
 @import '~toastr/toastr.scss';
 
+
 .home-page .wrapper {
     position: relative;
     padding-bottom: 98px;
@@ -1322,3 +1323,6 @@ footer ul li a{
 
 
 /*HOME-PAGE - END*/
+
+
+@import 'media.css';

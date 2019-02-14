@@ -8,7 +8,16 @@
 # testing
 /coverage
 /src/home-page-without-results.html
+/src/home-page.html
 /src/landing.html
+/src/post-job.html
+/src/profile.html
+/src/js
+/src/bootstrap
+/src/.idea
+/src/otherCode.html
+/src/images
+
 # production
 /build
 

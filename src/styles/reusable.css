@@ -90,23 +90,42 @@ a:hover{
     margin-left: 5px;
 }
 
-.dropdown-menu {
-    top: 50px;
+.dropdown-menu-down{
+    position: absolute;
+    background-color: #fff;
     min-width: 350px;
-    padding: 20px 50px;
+    padding: 20px 50px 25px;
     border: 1px solid #008ed6;
     border-radius: 0;
     -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     margin: 0;
+    list-style: none;
+    z-index: 1002;
+}
+
+.new-box {
+    height: auto;
+    width: max-content;
+    display: -webkit-inline-box;
+}
+
+.user-box-nav .dropdown .show{
+    will-change: transform;
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    top: 50px;
+    left: 0px;
 }
 .dropdown-menu > li > a {
-    font-weight: 500;
-    color: #9a9a9a;
+    color: #212529;
+    text-decoration: none;
+    font-weight: 300;
     font-size: 13px;
-    padding: 18px 0;
-    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
 }
 .dropdown-menu > li:last-child > a {
     border: none;
@@ -116,6 +135,9 @@ a:hover{
   border: none;
 }
 
+.no-border{
+    border: none;
+  }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color:#008ed6;
     text-decoration: none;
@@ -580,8 +602,7 @@ hr {
 }
 .radio-block .radio label {
     position: relative;
-    padding-left: 30px;
-    margin-right: 20px;
+
 }
 .radio-block .radio:last-child label {
     margin-right: 0;
@@ -903,3 +924,5 @@ input:checked + label > .checkbox-sqw .icon,
     color: #fff;
     background-color: #15a4fa;
 }
+
+@import 'media.css';
